@@ -54,7 +54,7 @@ const questions = [
 function writeToReadMe(answers) {
     const markdown = generateMarkdown(answers);
 
-    fs.writeFile('README.md', markdown, (err) =>
+    fs.writeFile('readMe/README.md', markdown, (err) =>
         err ? console.log(err) : console.log('README.md created successfully!')
     );
 }
