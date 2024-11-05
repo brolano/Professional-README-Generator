@@ -50,8 +50,6 @@ This project is licensed under the ${license} license. For more information, see
 function generateMarkdown(data) {
   return `# ${data.title}
 
-${renderLicenseBadge(data.license)}
-
 ## Description
 ${data.description}
 
