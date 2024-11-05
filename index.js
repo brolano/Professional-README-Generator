@@ -4,15 +4,12 @@ import fs from "fs";
 import generateMarkdown from './utils/generateMarkdown.js';
 
 
-
-
-
 // TODO: Create an array of questions for user input
-inquirer.prompt([
+const questions = [
     {
         type: 'input',
         name: 'title',        
-        message: 'What is name of your project?'
+        message: 'What is the name of your project?'
     },
     {
         type: 'input',
@@ -31,8 +28,18 @@ inquirer.prompt([
     },
     {
         type: 'input',
+        name: 'installation',
+        message: 'What are the installation instructions?'
+    },
+    {
+        type: 'input',
         name: 'description',        
-        message: 'Please write a short description of your project',
+        message: 'Please write a short description of your project.',
+    },
+    {
+        type: 'input',
+        name: 'contribution',
+        message: 'How can others contribute to the project?'
     },
     {
         type: 'list',
@@ -40,23 +47,23 @@ inquirer.prompt([
         message: 'What kind of license should the project have?',
         choices: ['MIT','Apache 2.0','GPL 3.0','None'],
     }
-])
-
-
+];
 
 
 // TODO: Create a function to write README file
-.then((answers) => {
+function writeToReadMe(answers) {
     const markdown = generateMarkdown(answers);
 
     fs.writeFile('README.md', markdown, (err) =>
-    err ? console.log(err) : console.log('README.md created successfully!')
-);
-});
+        err ? console.log(err) : console.log('README.md created successfully!')
+    );
+}
+
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer
+    inquirer.prompt(questions)
+    .then((answers) => writeToReadMe(answers))
 }
 
 // Function call to initialize app
