@@ -42,6 +42,12 @@ const questions = [
         message: 'How can others contribute to the project?'
     },
     {
+        type: 'input',
+        name: 'usage',
+        message: 'Describe the uses of the application'
+
+    },
+    {
         type: 'list',
         name: 'license',        
         message: 'What kind of license should the project have?',
