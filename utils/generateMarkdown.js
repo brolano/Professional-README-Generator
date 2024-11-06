@@ -59,7 +59,7 @@ function generateMarkdown(data) {
 - [Credits](#credits)
 - [Questions](#questions)
 
-  ## Description
+## Description
 ${data.description}
 
 ## Installation
