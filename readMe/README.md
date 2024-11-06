@@ -4,6 +4,7 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [How-To-Video](#how-to-video)
 - [License](#license)
 - [Contributing](#contributing)
 - [Credits](#credits)
@@ -17,6 +18,10 @@ Run npm i then npm i inquirer then node index.js
 
 ## Usage
 Save developers time by generating a professional README document using inquirer.prompt
+
+## How to Video
+
+https://drive.google.com/file/d/1FDCL0d5jAZi_l0djEeIIy_LV4p7Al97K/view
 
 
 ## License
