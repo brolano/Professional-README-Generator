@@ -50,7 +50,16 @@ This project is licensed under the ${license} license. For more information, see
 function generateMarkdown(data) {
   return `# ${data.title}
 
-## Description
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Credits](#credits)
+- [Questions](#questions)
+
+  ## Description
 ${data.description}
 
 ## Installation
@@ -62,10 +71,10 @@ ${data.usage}
 ${renderLicenseSection(data.license)}
 
 ## Contributing
-${data.contributing}
+${data.contribution}
 
-## Tests
-${data.tests}
+## Credits
+${data.name} https://github.com/${data.Github}
 
 ## Questions
 If you have any questions, you can contact me at [${data.email}](mailto:${data.email}).
